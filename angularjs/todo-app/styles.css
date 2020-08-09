@@ -1,0 +1,20 @@
+body { 
+    text-align: center;
+}
+
+h1 {
+    margin-top: 5%;
+}
+
+.btn-primary, .btn-success {
+    width: 25%;
+}
+
+button {
+    margin: 10px;
+}
+
+.form-control, .card {
+    width: 50%;
+    margin: 0 auto;
+}
