@@ -2,10 +2,10 @@ var app = angular.module("nestedControllers", []);
 app.controller("CtrlOne", CtrlOne);
 app.controller("CtrlTwo", CtrlTwo);
 
-function CtrlOne($scope) {
+function CtrlOne() {
     this.testProp = "From CtrlOne";
 }
 
-function CtrlTwo($scope) {
+function CtrlTwo() {
     // this.testProp = "From CtrlTwo";
 }
