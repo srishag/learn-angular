@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="nestedControllers">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Controllers</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Nested Controllers</h1>
+    <div ng-controller="CtrlOne as c1">
+        <p ng-bind="c1.testProp"></p>
+    </div>
+    <div ng-controller="CtrlTwo as c2">
+        <p ng-bind="c2.testProp"></p>
+    </div>
+</body>
+</html>
