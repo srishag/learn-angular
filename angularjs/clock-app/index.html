@@ -6,7 +6,7 @@
     <title>Clock App</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
 </head>
-<body ng-init="hourOfDay = 10">
+<body>
     <div ng-controller="MainCtrl">
         <h1>Hello Angular!</h1>
         <p ng-if="hourOfDay < 12">Good morning!</p>
@@ -17,8 +17,8 @@
         var clockApp = angular.module("clockApp", []);
         clockApp.controller("MainCtrl", Main);
         
-        function Main() {
-            console.log("controller called");
+        function Main($scope) {
+            $scope.hourOfDay = 10;
         }
     </script>
 </body>
