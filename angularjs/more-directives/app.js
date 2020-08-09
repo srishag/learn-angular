@@ -1,4 +1,4 @@
-angular.module("moreDirectives", [])
+angular.module("moreDirectives", ["myHelloModule"])
 .controller("Ctrl", MoreDirectivesCtrl);
 
 function MoreDirectivesCtrl() {

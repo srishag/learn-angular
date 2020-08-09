@@ -6,9 +6,13 @@
     <title>More Directives</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
     <script src="app.js"></script>
+    <script src="myModule.js"></script>
 </head>
 <body>
     <h1>More Directives</h1>
+    <div ng-controller="HelloCtrl as hello">
+        {{ hello.helloMessage }}
+    </div>
     <div ng-controller="Ctrl as ctrl">
         <div ng-repeat="obj in ctrl.myList">
             <p>Element {{ $index+1 }}</p>
