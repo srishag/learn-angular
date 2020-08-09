@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Todo App</h1>
+    <div ng-controller="ToDoCtrl as todo">
+        <p>Add a Todo:</p>
+        <input type="text" ng-model="todo.newItem"/>
+        <button ng-click="todo.addItem()">Add</button>
+        <p>Your Todos:</p>
+        <button ng-hide="todo.editMode" ng-click="todo.changeMode()">Edit</button>
+        <button ng-show="todo.editMode" ng-click="todo.changeMode()">Done</button>
+        <div ng-repeat="obj in todo.todoList">
+            <p ng-hide="todo.editMode">{{ $index+1 }}. {{ obj }} <button ng-click="todo.deleteItem($index)">Delete</button></p>
+            <p ng-show="todo.editMode">{{ $index+1 }}. <input type="text" ng-model="obj" value="{{obj}}"/></p>
+        </div>
+    </div>
+</body>
+</html>
