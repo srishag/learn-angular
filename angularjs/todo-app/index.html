@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo App</title>
+    <title>To Do App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>    
     <script src="app.js"></script>
 </head>
 <body>
-    <h1 class="display-1">Todo App</h1>
+    <h1 class="display-1">To Do App</h1>
     <div ng-controller="ToDoCtrl as todo">
-        <h6 class="display-6">Add a Todo:</h6>
+        <h6 class="display-6">Add a To Do:</h6>
         <input type="text" class="form-control" placeholder="Add new todo item" ng-model="todo.newItem"/>
         <button type="button" class="btn btn-success" ng-click="todo.addItem()">Add</button>
-        <h6 class="display-6">Your Todos:</h6>
+        <h6 class="display-6">Your To Dos:</h6>
         <button type="button" class="btn btn-primary" ng-hide="todo.editMode" ng-click="todo.changeMode()">Edit</button>
         <button type="button" class="btn btn-success" ng-show="todo.editMode" ng-click="todo.changeMode()">Done</button>
         <div class="card">
